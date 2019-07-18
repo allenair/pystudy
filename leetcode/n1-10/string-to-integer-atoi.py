@@ -13,8 +13,8 @@ class Solution(object):
         if m:
             res = int(m.group(0))
             if res >= 1 << 31:
-                return (1 << 31)-1
-            elif res*-1 >= 1 << 31:
+                return (1 << 31) - 1
+            elif res * -1 >= 1 << 31:
                 return -1 * (1 << 31)
 
         return res
