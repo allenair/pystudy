@@ -11,12 +11,11 @@ class Solution(object):
         if not needle or haystack == needle:
             return 0
 
-        index = -1
         for i in range(len(haystack) - len(needle) + 1):
             if haystack[i:i + len(needle)] == needle:
                 return i
 
-        return index
+        return -1
 
 
 print(Solution().strStr("mississippi", 'pi'))
