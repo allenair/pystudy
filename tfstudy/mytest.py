@@ -52,6 +52,9 @@ import redis
 #     lst = [2,3,4,5,6]
 #     fout.write(','.join(lst))
 
+# with open('d:/result2.txt','r',encoding='utf-8') as fin:
+#     for index, line in enumerate(fin.readlines()):
+#         print('{:3d} >>> {}'.format(index+1, line))
 
 def deal_csv_file(inputFileName, outputFileName):
     lst = []
@@ -78,8 +81,5 @@ def deal_csv_file(inputFileName, outputFileName):
                 fout.write(line + '\n')
 
 
-# deal_csv_file('d:/new_all_data.csv', 'd:/all_data_result.txt')
+deal_csv_file('d:/1000.csv', 'd:/all_data_result.txt')
 
-with open('d:/result2.txt','r',encoding='utf-8') as fin:
-    for index, line in enumerate(fin.readlines()):
-        print('{:3d} >>> {}'.format(index+1, line))
