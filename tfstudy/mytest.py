@@ -78,8 +78,9 @@ def deal_csv_file(inputFileName, outputFileName):
                 line = line[1:]
                 if line[-1] == '"':
                     line = line[:-1]
-                fout.write(line + '\n')
+                fout.write(line.strip() + '\n')
+            
 
 
-deal_csv_file('d:/1000.csv', 'd:/all_data_result.txt')
+deal_csv_file('d:/zzzz.txt', 'd:/aaa_result.txt')
 
