@@ -4,3 +4,5 @@ tfstudy/mydemo.py
 tfstudy/mytest.py
 tfstudy/__pycache__/mydemo.cpython-37.pyc
 tfstudy/mytest.py
+work/__pycache__/demo_decrorator.cpython-37.pyc
+.vscode/sftp.json
