@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-
 class Solution(object):
     def maxSubArray(self, nums):
         """
