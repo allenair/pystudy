@@ -6,3 +6,10 @@ tfstudy/__pycache__/mydemo.cpython-37.pyc
 tfstudy/mytest.py
 work/__pycache__/demo_decrorator.cpython-37.pyc
 .vscode/sftp.json
+.idea/.gitignore
+.idea/misc.xml
+.idea/modules.xml
+.idea/pystudy.iml
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/workspace.xml
