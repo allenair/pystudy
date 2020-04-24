@@ -1,16 +1,16 @@
 # -*- coding:utf-8 -*-
 class Solution:
-    def spiralOrder(self, matrix: [[int]]) -> [int]:
-        if matrix == None or len(matrix) == 0:
+    def generateMatrix(self, n: int) -> [[int]]:
+        if n <= 0:
             return []
-        res = []
+        res = [[]] * n
+        for m in range(n):
+            res[m] = [0] * n
         pathSet = set()
-        m, n = len(matrix), len(matrix[0])
-        i, k, direct = 0, 0, 0
-        num = m * n
-        while len(pathSet) < num:
+        i, k, direct, num = 0, 0, 0, 1
+        while num <= n * n:
             now = (i, k)
-            if now in pathSet or i == m or i < 0 or k == n or k < 0:
+            if now in pathSet or i == n or i < 0 or k == n or k < 0:
                 # back one step
                 if direct == 0:
                     k = k - 1
@@ -23,8 +23,9 @@ class Solution:
                 # change direction
                 direct = (direct + 1) % 4
             else:
-                res.append(matrix[i][k])
+                res[i][k] = num
                 pathSet.add(now)
+                num = num + 1
 
             # get next position
             if direct == 0:
@@ -35,7 +36,8 @@ class Solution:
                 k = k - 1
             else:
                 i = i - 1
+
         return res
 
 
-print(Solution().spiralOrder([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]))
+print(Solution().generateMatrix(3))
