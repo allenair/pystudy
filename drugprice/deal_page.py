@@ -16,6 +16,9 @@ def _getHtmlContent(url, encoding="utf-8"):
 
 
 def parseTiandiPage(url):
+    """
+    解析从天地网获取的网页中的价格信息
+    """
     htmlContent = _getHtmlContent(url)
     priceList = []
     soup = BeautifulSoup(htmlContent, 'html.parser')
