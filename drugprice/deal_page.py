@@ -31,3 +31,20 @@ def parseTiandiPage(url):
         priceList.append(innerList)
 
     return priceList
+
+def parseKangmeiPage(url):
+    """
+    解析从康美中药网获取的网页中的价格信息
+    """
+    htmlContent = _getHtmlContent(url)
+    priceList = []
+    soup = BeautifulSoup(htmlContent, 'html.parser')
+    for tag in soup.select("div[class='content-table'] > table > tbody > tr"):
+        innerList = []
+        for child in tag.children:
+            val = child.string
+            if val and len(val.strip()) > 0:
+                innerList.append(val)
+        priceList.append(innerList)
+
+    return priceList
