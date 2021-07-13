@@ -2,7 +2,8 @@
 
 
 class Solution(object):
-    def divide(self, dividend, divisor):
+    @staticmethod
+    def divide(dividend, divisor):
         """
         :type dividend: int
         :type divisor: int
@@ -23,16 +24,15 @@ class Solution(object):
             elif flag==-1 and ans==1 << 31:
                 return -1 * (1<<31)
         else:
-            subsum = divisor
+            subsume = divisor
             while dividend >= divisor:
-                while (subsum << 1) <= dividend:
+                while (subsume << 1) <= dividend:
                     cnt <<= 1
-                    subsum <<= 1
+                    subsume <<= 1
                 ans += cnt
                 cnt = 1
-                dividend -= subsum
-                subsum = divisor
-                
+                dividend -= subsume
+                subsume = divisor
 
         return ans * flag
 

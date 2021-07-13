@@ -7,7 +7,7 @@ class Solution(object):
         """
         x1 = str(x)
         x2 = x1[::-1]
-
+        
         return x1 == x2
 
 
